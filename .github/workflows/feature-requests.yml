@@ -13,9 +13,7 @@ jobs:
   feature_triage:
     # To prevent this action from running in forks, we only run it if the repository is exactly the
     # angular/angular-cli repository.
-    if: github.repository == 'angular/angular-cli'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: angular/dev-infra/github-actions/feature-request@f8cb0ad4eb1f17a222dbd5b5910ec4694ea138b7
+    if: github.repository == 'angular/angular-cli
+
         with:
           angular-robot-key: ${{ secrets.ANGULAR_ROBOT_PRIVATE_KEY }}
